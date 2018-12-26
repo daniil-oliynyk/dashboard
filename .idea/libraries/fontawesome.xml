@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="fontawesome">
+    <ANNOTATIONS>
+      <root url="file://$USER_HOME$/Software Libraries/fontawesome" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/Software Libraries/fontawesome" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Software Libraries/fontawesome" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$USER_HOME$/Software Libraries/fontawesome" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Software Libraries/fontawesome" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Software Libraries/fontawesome" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Software Libraries/fontawesome" recursive="false" type="SOURCES" />
+  </library>
+</component>
