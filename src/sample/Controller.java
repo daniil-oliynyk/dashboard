@@ -1,11 +1,8 @@
 package sample;
 import com.jfoenix.controls.JFXTextField;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import com.jfoenix.controls.JFXButton;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -52,11 +49,10 @@ public class Controller implements Initializable {
         if (event.getCode() == KeyCode.ENTER) {
             String text = searchTF.getText().toUpperCase();
 
-            Header header = new BasicHeader("X-CMC_PRO_API_KEY","583b3ead-7ac4-4169-82e1-4e0f0ea5c832");
+            Header header = new BasicHeader("X-CMC_PRO_API_KEY","");
             List<Header> headers = new ArrayList<Header>();
             headers.add(header);
             CloseableHttpClient client = HttpClients.custom().setDefaultHeaders(headers).build();
-            //CloseableHttpResponse response = client.execute( new HttpGet("http://data.fixer.io/latest?access_key=b4773efeeef782cb392da95afa056b4e&symbols=CAD"));
 
             String url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol="+text;
             HttpGet request = new HttpGet(url);
@@ -67,7 +63,7 @@ public class Controller implements Initializable {
             String content = EntityUtils.toString(entity);
             System.out.println(content);
 
-            JSONParser parser = new JSONParser(content);
+            JSONQuoteParser parser = new JSONQuoteParser(content);
             information = parser.parse();
 
             for(String s: information){

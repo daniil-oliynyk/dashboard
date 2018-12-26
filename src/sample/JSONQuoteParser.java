@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class JSONParser {
+public class JSONQuoteParser {
 
     private String name;
     private String symbol;
@@ -21,7 +21,7 @@ public class JSONParser {
     private String content;
     private ArrayList<String> information;
 
-    public JSONParser(String content){
+    public JSONQuoteParser(String content){
         this.content=content;
     }
 

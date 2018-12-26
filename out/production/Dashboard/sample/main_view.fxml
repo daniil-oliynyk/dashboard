@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -40,9 +41,9 @@
       </Pane>
       <Pane layoutX="223.0" layoutY="7.0" prefHeight="48.0" prefWidth="798.0" style="-fx-background-color: #D3D6DD;">
          <children>
-            <Pane layoutX="14.0" layoutY="4.0" prefHeight="41.0" prefWidth="427.0" style="-fx-background-color: #D3D6DD;">
+            <Pane layoutX="14.0" layoutY="4.0" prefHeight="41.0" prefWidth="737.0" style="-fx-background-color: #D3D6DD;">
                <children>
-                  <JFXTextField id="search_bar" fx:id="searchTF" focusColor="#d3d6dd" layoutX="48.0" onKeyPressed="#search" prefHeight="41.0" prefWidth="374.0" promptText="Search" snapToPixel="false" style="-fx-background-color: #D3D6DD;" unFocusColor="#d3d6dd">
+                  <JFXTextField id="search_bar" fx:id="searchTF" focusColor="#d3d6dd" layoutX="48.0" onKeyPressed="#search" prefHeight="41.0" prefWidth="675.0" promptText="Search" snapToPixel="false" style="-fx-background-color: #D3D6DD;" unFocusColor="#d3d6dd">
                      <font>
                         <Font name="Segoe UI" size="18.0" />
                      </font>
@@ -64,7 +65,13 @@
                         <Image url="@../Images/cross-out.png" />
                      </image>
                   </ImageView>
-               </graphic></JFXButton>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Clear" />
+               </tooltip>
+               <font>
+                  <Font name="Segoe UI Light" size="12.0" />
+               </font></JFXButton>
          </children>
       </Pane>
       <fx:define>
@@ -77,6 +84,9 @@
                   <Image url="@../Images/shut-down.png" />
                </image>
             </ImageView>
-         </graphic></JFXButton>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Exit Dashboard" />
+         </tooltip></JFXButton>
    </children>
 </AnchorPane>
